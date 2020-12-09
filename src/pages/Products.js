@@ -11,10 +11,11 @@ const Products = () => {
         const productName =  e.target.childNodes[1].innerText
         const productPrice = e.target.childNodes[2].innerText
         const productImage = e.target.childNodes[0].currentSrc
+        const productSku = e.target.childNodes[3].innerText
 
         setBasket(prevProduct=>[
             ...prevProduct,
-            {title:productName, price:productPrice, image:productImage}
+            {title:productName, price:productPrice, image:productImage, sku:productSku}
         ])
     }
     return (
@@ -27,6 +28,7 @@ const Products = () => {
                             <img src={product.image.default} alt={product.title} title={product.title}/>
                             <p id='Title'>{product.title}</p>
                             <p id='Price'>£{product.price}</p>
+                            <p id='Sku'>{product.sku}</p>
                             <button>Add to Basket</button>
                         </form>
                     </div>
