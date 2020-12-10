@@ -1,0 +1,49 @@
+.Basket{
+    margin-top: 10vh;
+    min-width: 80vw;
+
+    h1{
+        margin-left:10vw;
+    }
+
+    .BasketItem{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    border: 1px solid $accent-color;
+    margin-top: 5vh;
+    width: 80vw;
+    background-color: $background-color;
+    min-height: 20vh;
+    padding: 2em;
+
+        p{
+        padding-left: 3vw;
+        margin-top: 2vh;
+    }
+        img{
+        height: 30vh;
+        width: 20vw;
+    }
+}
+
+}
+
+@media(max-width:720px){
+    .Basket{
+        h1{
+            margin-left:5vw;
+        }
+        .BasketItem{
+        width: 90vw;
+        background-color: #f0f0f0;
+
+            img{
+            height: 30vh;
+            min-width: 40vw;
+            }
+        }
+    }
+}
+

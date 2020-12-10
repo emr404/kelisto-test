@@ -12,8 +12,13 @@ const Basket = () => {
                 basketContent.map(item=>
                     <div className='BasketItem' key={item.sku}>
                         <img src={item.image} alt={item.title} title={item.title}/>
-                        <p>{item.price}</p>
-                        <p>{item.title}</p>
+                        
+                        <div>
+                        <p id='Price'>{item.price}</p>
+                        <p id='Title'>{item.title}</p>
+                        <p id='Qty'>Qty: {item.qty}</p>
+                        
+                        </div>
                     </div>
                 )
             }

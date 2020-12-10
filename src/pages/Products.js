@@ -15,7 +15,7 @@ const Products = () => {
 
         setBasket(prevProduct=>[
             ...prevProduct,
-            {title:productName, price:productPrice, image:productImage, sku:productSku}
+            {title:productName, price:productPrice, image:productImage, sku:productSku, qty:1}
         ])
     }
     return (
@@ -28,7 +28,7 @@ const Products = () => {
                             <img src={product.image.default} alt={product.title} title={product.title}/>
                             <p id='Title'>{product.title}</p>
                             <p id='Price'>£{product.price}</p>
-                            <p id='Sku'>{product.sku}</p>
+                            <p id='Sku'>SKU: {product.sku}</p>
                             <button>Add to Basket</button>
                         </form>
                     </div>
